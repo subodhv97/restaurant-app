@@ -2,6 +2,22 @@
   text-align: center;
 }
 
+span{
+  display: inline-block;
+  background-color: rgb(134, 202, 94);
+  padding: 15px;
+  margin: 5px;
+}
+
+.list-wrapper{
+  border: 1px solid #ccc;
+  margin:auto;
+  width: 500px;
+  margin-top: 10px;
+  
+
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
