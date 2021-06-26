@@ -7,7 +7,7 @@ import RestaurantCreate from './components/RestaurantCreate';
 import RestaurantDetail from './components/RestaurantDetail';
 import RestaurantList from './components/RestaurantList';
 import RestaurantSearch from './components/RestaurantSearch';
-import {Navbar,Nav} from 'react-bootstrap'
+import { Navbar, Nav } from 'react-bootstrap'
 
 function App() {
   return (
@@ -29,7 +29,7 @@ function App() {
 
           </Navbar.Collapse>
         </Navbar>
-       
+
         <Route path="/list">
           <RestaurantList />
         </Route>
@@ -42,14 +42,16 @@ function App() {
         <Route path="/details">
           <RestaurantDetail />
         </Route>
-        <Route path="/update">
-          <RestaurantUpdate />
+        <Route path="/update /: id"
+          render={props => (<RestaurantUpdate{...props} />)}
+        >
+
         </Route>
         <Route exact path="/">
           <Home />
         </Route>
       </Router>
-    </div>
+    </div> 
   );
 }
 
