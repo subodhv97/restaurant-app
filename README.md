@@ -1,4 +1,6 @@
 # This App is based on using Fake API
+## For more visit
+https://github.com/typicode/json-server
 
 ## Getting Started with Create React App
 
