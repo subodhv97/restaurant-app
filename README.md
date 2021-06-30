@@ -1,4 +1,4 @@
-#This App is based on using Fake API
+# This App is based on using Fake API
 
 ## Getting Started with Create React App
 
