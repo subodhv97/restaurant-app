@@ -20,6 +20,10 @@ class RestaurantCreate extends Component {
             },
             body: JSON.stringify(this.state)
 
+        }).then((result)=>{
+            result.json().then((resp)=>{
+                alert("Restaurant has been added")
+            })
         })
     }
 

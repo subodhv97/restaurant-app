@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { Table } from 'react-bootstrap'
-import {Link } from 'react-router-dom';
-
+import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCoffee , faPencilAlt, faTrashAlt} from '@fortawesome/free-solid-svg-icons'
 
 class RestaurantList extends Component {
     constructor() {
@@ -11,12 +12,32 @@ class RestaurantList extends Component {
         }
     }
     componentDidMount() {
+       this.getdata()
+    }
+    getdata(){
         fetch("http://localhost:3000/restaurant").then((response) => {
             response.json().then((result) => {
 
                 this.setState({ list: result })
             })
         })
+    }
+    delete(id)
+    {
+        fetch('http://localhost:3000/restaurant/'+id,{
+            method: 'delete',
+            headers:{
+                'content-Type':'application/json'
+            },
+            body: JSON.stringify(this.state)
+
+        }).then((result)=>{
+            result.json().then((resp)=>{
+                alert("Restaurant has been deleted")
+                this.getdata()
+            })
+        })
+
     }
     render() {
         // console.warn(this.state)
@@ -46,7 +67,10 @@ class RestaurantList extends Component {
                                                 <td>{item.email}</td>
                                                 <td>{item.rating}</td>
                                                 <td>{item.address}</td>
-                                                <td><Link to={"/update" + item.id}>Update</Link></td>
+                                                <td><Link to={"/update/" + item.id}><FontAwesomeIcon icon={faPencilAlt} /></Link>
+                                                
+                                                    <span onClick={()=>{this.delete(item.id)}}><FontAwesomeIcon icon={faTrashAlt} /></span>
+                                                </td>
                                             </tr>
                                         )
                                     }

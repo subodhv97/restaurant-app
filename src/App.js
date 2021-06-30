@@ -7,7 +7,10 @@ import RestaurantCreate from './components/RestaurantCreate';
 import RestaurantDetail from './components/RestaurantDetail';
 import RestaurantList from './components/RestaurantList';
 import RestaurantSearch from './components/RestaurantSearch';
+import Login from './components/Login';
 import { Navbar, Nav } from 'react-bootstrap'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCoffee, faHome, faKey, faListOl, faPencilAlt, faPlus, faSearch, faUser } from '@fortawesome/free-solid-svg-icons'
 
 function App() {
   return (
@@ -18,12 +21,14 @@ function App() {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">
-              <Nav.Link href="#home"><Link to="/">Home</Link></Nav.Link>
-              <Nav.Link href="#link"><Link to="/list">List</Link></Nav.Link>
-              <Nav.Link href="#link"><Link to="/create">Create</Link></Nav.Link>
-              <Nav.Link href="#link"><Link to="/search">Search</Link></Nav.Link>
-              <Nav.Link href="#link"><Link to="/details">Details</Link></Nav.Link>
-              <Nav.Link href="#link"><Link to="/update">Update</Link></Nav.Link>
+              <Nav.Link href="#home"><Link to="/"><FontAwesomeIcon icon={faHome} /> HOME</Link></Nav.Link>
+              <Nav.Link href="#link"><Link to="/list"><FontAwesomeIcon icon={faListOl} /> LIST</Link></Nav.Link>
+              <Nav.Link href="#link"><Link to="/create"><FontAwesomeIcon icon={faPlus} /> CREATE</Link></Nav.Link>
+              <Nav.Link href="#link"><Link to="/search"><FontAwesomeIcon icon={faSearch} /> SEARCH</Link></Nav.Link>
+
+              <Nav.Link href="#link"><Link to="/update">UPDATE</Link></Nav.Link>
+              <Nav.Link href="#link"><Link to="/login"><FontAwesomeIcon icon={faUser} /> Login</Link></Nav.Link>
+
 
             </Nav>
 
@@ -43,15 +48,20 @@ function App() {
           <RestaurantDetail />
         </Route>
         <Route path="/update /: id"
-          render={props => (<RestaurantUpdate{...props} />)}
+          render={props => (<RestaurantUpdate {...props} />)}
+        >
+          {/*  */}
+        </Route> <Route path="/login"
+          render={props => (<Login {...props} />)}
         >
 
         </Route>
+        {/*  */}
         <Route exact path="/">
           <Home />
         </Route>
       </Router>
-    </div> 
+    </div>
   );
 }
 

@@ -17,7 +17,13 @@ span{
   
 
 }
-
+.searc_data{
+    padding: 30px;
+    margin-block: auto;
+    list-style: circle;
+    margin: 50px;
+    background-color: rgb(60, 170, 74);
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
