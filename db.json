@@ -1,0 +1,39 @@
+{
+  "login":[
+    {
+      "username":"subodh",
+      "password":"password"
+    }
+  ]
+  ,
+  "restaurant": [
+    {
+      "id": 2,
+      "name": "McDonalds",
+      "address": "Lucknow",
+      "rating": "4.8",
+      "email": "mcd@gmail.com"
+    },
+    {
+      "id": 3,
+      "name": "Dominos",
+      "address": "Barabanki",
+      "rating": "4.5",
+      "email": "dominos@gmail.com"
+    },
+    {
+      "name": "mam",
+      "email": "mam@gmail.com",
+      "rating": "4.5",
+      "address": "Lucknow",
+      "id": 4
+    },
+    {
+      "name": "manu",
+      "email": "manu@gmail.com",
+      "rating": "4.5",
+      "address": "Lucknow",
+      "id": 5
+    }
+  ]
+}
