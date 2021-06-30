@@ -1,6 +1,9 @@
 # This App is based on using Fake API
 ## For more visit
 https://github.com/typicode/json-server
+### Step 1- make folder adjacent to react-app folder
+### step2- Install json server
+### step3- make subfolder db.json and copy content from file db.json
 
 ## Getting Started with Create React App
 
