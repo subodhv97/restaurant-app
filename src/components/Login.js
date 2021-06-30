@@ -29,8 +29,8 @@ class Login extends Component {
         return (
             <div>
                 <h1>Login Here</h1>
-                <input name="user" type="test" onChange={(event) => this.setState({ username: event.target.value })} /> <br /><br></br>
-                <input name="password" type="text" onChange={(event) => this.setState({ password: event.target.value })} /> <br /><br></br>
+                <input name="user" type="test" onChange={(event) => this.setState({ username: event.target.value })} placeholder="username" /> <br /><br></br>
+                <input name="password" type="text" onChange={(event) => this.setState({ password: event.target.value })} placeholder="password" /> <br /><br></br>
                 <button onClick={() => { this.login() }}>Login</button>
             </div>
         );
